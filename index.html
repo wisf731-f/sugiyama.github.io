@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="毎日に小さな余白を。自家焙煎コーヒーと季節のおやつを楽しめる、街角のカフェ ひだまり。">
+    <title>ひだまり珈琲 | 街角の小さなカフェ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ひだまり珈琲 トップ">
+        <span class="brand-mark" aria-hidden="true">h</span>
+        <span class="brand-copy"><strong>ひだまり珈琲</strong><small>COFFEE & BAKES</small></span>
+      </a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <a href="#about">お店について</a>
+        <a href="#menu">メニュー</a>
+        <a href="#voices">お客さまの声</a>
+        <a href="#faq">よくある質問</a>
+      </nav>
+      <a class="button button-small header-cta" href="#access">お店に行く <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション" hidden>
+        <a href="#about">お店について</a>
+        <a href="#menu">メニュー</a>
+        <a href="#voices">お客さまの声</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#access">アクセス</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero page-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> YOUR LITTLE SUNSHINE</p>
+          <h1 id="hero-title">ひと息つけば、<br>今日がちょっと<span>好きになる。</span></h1>
+          <p class="hero-description">丁寧に淹れたコーヒーと、焼きたてのおやつ。<br class="desktop-break">いつもの街角で、あなたのためのひと休みを。</p>
+          <a class="button" href="#menu">メニューを見る <span aria-hidden="true">↓</span></a>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>自家焙煎コーヒーと季節の焼き菓子</span></div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://placehold.jp/800x400.png?text=Main+Visual" alt="ひだまり珈琲の店内とコーヒー" width="800" height="400">
+          <span class="visual-stamp">GOOD<br>DAY!</span>
+          <p class="image-caption">A GOOD CUP, A GOOD DAY.</p>
+        </div>
+      </section>
+
+      <section class="intro section-pad" id="about" aria-labelledby="intro-title">
+        <div class="section-heading">
+          <p class="eyebrow">A PLACE TO PAUSE</p>
+          <h2 id="intro-title">いつもの一日に、<br>小さなごほうびを。</h2>
+          <p>朝のはじまりにも、午後の寄り道にも。<br>ひだまり珈琲は、誰もが自分らしく過ごせる街の休憩所です。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-item">
+            <span class="feature-number">01</span>
+            <span class="feature-icon" aria-hidden="true">☼</span>
+            <h3>毎朝、店内で焙煎</h3>
+            <p>豆の個性に合わせて丁寧に焙煎。ふわりと広がる香りと、澄んだ一杯をお届けします。</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">02</span>
+            <span class="feature-icon" aria-hidden="true">❋</span>
+            <h3>季節を焼き込んだおやつ</h3>
+            <p>旬の果物や素材を使い、毎日お店で手づくり。コーヒーにぴったりの焼き菓子です。</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">03</span>
+            <span class="feature-icon" aria-hidden="true">⌂</span>
+            <h3>気ままに過ごせる空間</h3>
+            <p>ひとりでも、誰かと一緒でも。窓辺の席で、思い思いの時間をお楽しみください。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-section section-pad" id="menu" aria-labelledby="menu-title">
+        <div class="section-topline">
+          <div>
+            <p class="eyebrow">FROM OUR COUNTER</p>
+            <h2 id="menu-title">今日のお楽しみ</h2>
+          </div>
+          <p class="section-aside">季節ごとに変わる、<br>お気に入りを見つけて。</p>
+        </div>
+        <div class="menu-grid" id="menu-list" aria-live="polite"></div>
+      </section>
+
+      <section class="voices-section section-pad" id="voices" aria-labelledby="voices-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">KIND WORDS</p>
+          <h2 id="voices-title">お客さまの声</h2>
+          <p>ここで過ごす時間が、みなさんの日々の楽しみになりますように。</p>
+        </div>
+        <div class="voice-grid" id="voice-list" aria-live="polite"></div>
+      </section>
+
+      <section class="faq-section section-pad" id="faq" aria-labelledby="faq-title">
+        <div class="section-topline faq-heading">
+          <div>
+            <p class="eyebrow">GOOD TO KNOW</p>
+            <h2 id="faq-title">よくある質問</h2>
+          </div>
+          <p class="section-aside">ご来店前に気になることを<br>まとめました。</p>
+        </div>
+        <div class="faq-list" id="faq-list"></div>
+      </section>
+
+      <section class="visit-section" id="access" aria-labelledby="visit-title">
+        <div class="visit-inner page-width">
+          <div>
+            <p class="eyebrow">COME SAY HELLO</p>
+            <h2 id="visit-title">今日の寄り道は、<br>ひだまり珈琲へ。</h2>
+            <p>東京都 〇〇区 ひだまり通り 1-2-3<br>火〜日  9:00–18:00（L.O. 17:30）<br>月曜定休</p>
+          </div>
+          <a class="button button-light" href="https://maps.google.com/?q=%E3%81%B2%E3%81%A0%E3%81%BE%E3%82%8A%E7%8F%88%E7%90%B2" target="_blank" rel="noreferrer">地図を開く <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">h</span>
+        <span class="brand-copy"><strong>ひだまり珈琲</strong><small>COFFEE & BAKES</small></span>
+      </a>
+      <p>一杯のコーヒーから、今日に小さなひだまりを。</p>
+      <small class="copyright">© 2026 Hidamari Coffee</small>
+    </footer>
+  </body>
+</html>
